@@ -1,7 +1,6 @@
 <div align="center">
   <h1>🏢 XAI-Driven Decentralized Infrastructure Monitoring and Safety Navigation System</h1>
   
-  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
   [![Python](https://img.shields.io/badge/Python-3.8+-yellow.svg)](https://www.python.org/)
   [![Flutter](https://img.shields.io/badge/Flutter-App-blue.svg)](https://flutter.dev/)
   [![C++](https://img.shields.io/badge/C++-IoT-purple.svg)](https://isocpp.org/)
