@@ -14,7 +14,7 @@ This project uses sensor data (temperature, humidity, pressure, gas, sound, and 
 ---
 
 ## 🎥 Project Demonstration
-[**Watch the Full Project Test Video here!**](https://youtu.be/p7LBNeEeAhU)
+[**Watch the Project Test Video here!**](https://youtu.be/p7LBNeEeAhU)
 
 ![Sensor Prototype](assets/IMG20260120160910.jpg)
 
@@ -146,7 +146,7 @@ mosquitto_sub -t building/Apt2B/sensors
 
 ## 📊 Monitoring & Logs
 
-- **Node-RED Dashboard**: [http://localhost:1880/ui](http://localhost:1880/ui)
+- **Node-RED Dashboard**: Displays the real-time sensor data, the safety score, and the XAI explanations.
 - **Logs** (stored in `logs/` directory):
   - `xai_system.log`: Main system logs and anomaly detections.
   - `apartment_score.log`: Hourly scoring job logs.
