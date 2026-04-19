@@ -1,0 +1,29 @@
+# System Logs
+logs/*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+venv/
+env/
+
+# Databases (Exclude active DBs if you don't want to commit sensor data)
+# data/*.db
+# data/*.sqlite3
+
+# C++ / PlatformIO
+sensor_code/.pio/
+sensor_code/.vscode/
+
+# Flutter / Dart
+mobile_app/appV3/.dart_tool/
+mobile_app/appV3/.pub-cache/
+mobile_app/appV3/.pub/
+mobile_app/appV3/build/
+mobile_app/appV3/*.iml
+
+# OS generated files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,55 @@
+{
+  "device_id": "12345678-1234-1234-1234-1234567890ab",
+  "last_updated": "2026-01-17T18:56:51.482732",
+  "location": {
+    "position_x": 0.1964,
+    "position_y": 0.8036,
+    "zone": "NW",
+    "zone_confidence": 0.776,
+    "zone_status": "FIRE",
+    "is_danger_zone": true
+  },
+  "zone_probabilities": {
+    "NW": 0.776
+  },
+  "movement": {
+    "velocity_x": -0.0,
+    "velocity_y": 0.0,
+    "speed": 0.0001,
+    "direction": null
+  },
+  "anchor_data": {
+    "NW": {
+      "distance_m_raw": 0.54,
+      "distance_m_avg": 0.547,
+      "rssi_dBm_avg": -61.1,
+      "sample_count": 3
+    }
+  },
+  "status": "ESCAPED",
+  "priority": true,
+  "message": "ESCAPED SAFELY",
+  "evacuation": {
+    "is_evacuating": false,
+    "is_sheltering": false,
+    "assigned_exit": "",
+    "path_nodes": [],
+    "current_step": 0,
+    "total_steps": 0,
+    "progress_percent": 100,
+    "direction_summary": "",
+    "turn_by_turn_instructions": [
+      "1. Stay low to avoid smoke",
+      "2. Cover nose and mouth with wet cloth",
+      "3. Signal for help at window if possible",
+      "4. Wait for rescue"
+    ]
+  },
+  "dynamic_guidance": {
+    "current_instruction": "",
+    "urgency_level": "normal",
+    "wrong_direction_count": 0,
+    "reroute_count": 0,
+    "path_history": []
+  }
+}

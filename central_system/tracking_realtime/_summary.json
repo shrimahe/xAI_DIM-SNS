@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-01-20T11:28:15.400304",
+  "mode": "REALTIME",
+  "version": "3.0-probabilistic",
+  "building_status": {
+    "overall": "DANGER",
+    "danger_zones": [
+      "NE"
+    ],
+    "warning_zones": [],
+    "sensors": {
+      "NW": {
+        "fire": false,
+        "gas": 36,
+        "temperature": 25.95,
+        "sound": 70,
+        "status": "OK"
+      },
+      "NE": {
+        "fire": true,
+        "gas": 40,
+        "temperature": 26.61,
+        "sound": 69,
+        "status": "FIRE"
+      },
+      "SW": {
+        "fire": false,
+        "gas": 52,
+        "temperature": 25.0,
+        "sound": 0,
+        "status": "OK"
+      },
+      "SE": {
+        "fire": false,
+        "gas": 51,
+        "temperature": 27.12,
+        "sound": 68,
+        "status": "OK"
+      }
+    }
+  },
+  "tracking_summary": {
+    "total": 1,
+    "safe": 0,
+    "warning": 0,
+    "evacuating": 0,
+    "escaped": 1
+  },
+  "zone_occupancy": {
+    "E_Mid": 1
+  },
+  "tracked_devices": [
+    {
+      "device_id": "12345678-1234-1234-1234-1234567890ab",
+      "zone": "E_Mid",
+      "zone_confidence": 0.352,
+      "status": "ESCAPED"
+    }
+  ]
+}

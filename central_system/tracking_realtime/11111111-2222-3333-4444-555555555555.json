@@ -1,0 +1,43 @@
+{
+  "device_id": "11111111-2222-3333-4444-555555555555",
+  "last_updated": "2026-01-16T17:01:11.144544",
+  "location": {
+    "position_x": 0.3937,
+    "position_y": 0.5119,
+    "zone": "CENTER",
+    "zone_status": "OK",
+    "is_danger_zone": false
+  },
+  "anchor_data": {
+    "NW": {
+      "distance_m": 1.76,
+      "rssi_dBm": -76.4
+    },
+    "NE": {
+      "distance_m": 0.98,
+      "rssi_dBm": -68.7
+    },
+    "SW": {
+      "distance_m": 1.52,
+      "rssi_dBm": -74.5
+    },
+    "SE": {
+      "distance_m": 1.01,
+      "rssi_dBm": -69.1
+    }
+  },
+  "status": "SAFE",
+  "priority": false,
+  "message": "All clear",
+  "evacuation": {
+    "is_evacuating": false,
+    "is_sheltering": false,
+    "assigned_exit": "EXIT_B",
+    "path_nodes": [],
+    "current_step": 0,
+    "total_steps": 0,
+    "progress_percent": 100,
+    "direction_summary": "",
+    "turn_by_turn_instructions": []
+  }
+}

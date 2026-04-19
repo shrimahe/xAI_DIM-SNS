@@ -1,0 +1,76 @@
+{
+  "device_id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+  "last_updated": "2026-01-21T14:31:23.044170",
+  "location": {
+    "position_x": 0.4703,
+    "position_y": 0.4698,
+    "zone": "CENTER",
+    "zone_confidence": 0.761,
+    "zone_status": "SAFE",
+    "is_danger_zone": false
+  },
+  "zone_probabilities": {
+    "CENTER": 0.761
+  },
+  "movement": {
+    "velocity_x": -0.0042,
+    "velocity_y": 0.0018,
+    "speed": 0.0046,
+    "direction": null
+  },
+  "anchor_data": {
+    "NW": {
+      "distance_m_raw": 4.53,
+      "distance_m_avg": 4.355,
+      "rssi_dBm_avg": -88.2,
+      "sample_count": 2
+    },
+    "NE": {
+      "distance_m_raw": 6.7,
+      "distance_m_avg": 6.45,
+      "rssi_dBm_avg": -93.3,
+      "sample_count": 2
+    },
+    "SW": {
+      "distance_m_raw": 5.64,
+      "distance_m_avg": 5.175,
+      "rssi_dBm_avg": -90.4,
+      "sample_count": 2
+    },
+    "SE": {
+      "distance_m_raw": 4.3,
+      "distance_m_avg": 4.35,
+      "rssi_dBm_avg": -88.2,
+      "sample_count": 2
+    }
+  },
+  "status": "EVACUATING",
+  "priority": false,
+  "message": "Evacuate via Emergency Exit",
+  "evacuation": {
+    "is_evacuating": true,
+    "is_sheltering": false,
+    "assigned_exit": "Emergency Exit",
+    "path_nodes": [
+      "CENTER",
+      "W_Mid",
+      "SW"
+    ],
+    "current_step": 0,
+    "total_steps": 3,
+    "progress_percent": 0.0,
+    "direction_summary": "West -> South",
+    "turn_by_turn_instructions": [
+      "1. Go West to W_Mid",
+      "2. Go South to SW",
+      "3. EXIT via Emergency Exit"
+    ]
+  },
+  "dynamic_guidance": {
+    "current_instruction": "Proceed to CENTER",
+    "urgency_level": "normal",
+    "wrong_direction_count": 0,
+    "reroute_count": 9,
+    "path_history": []
+  }
+}

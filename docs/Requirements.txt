@@ -1,0 +1,102 @@
+paho-mqtt
+ollama
+
+
+mosquitto_sub -t building/Apt2A/12345678-1234-1234-1234-1234567890ab
+
+#Test Codes 
+#1.Publishing a value
+mosquitto_pub -t building/Apt2B/sensors -m '{
+  "fire_state": true,
+  "temperature": 28.28,
+  "humidity": 53.40,
+  "pressure": 921.81,
+  "gas_level": 1891,
+  "sound_level": 304
+}'
+
+{
+"fire_state":false,
+"temperature":26.3,
+"humidity":65.5,
+"pressure":1028.6,
+"gas_level":368,
+"sound_level":231
+}
+
+
+#2. Check MQTT Data flow 
+mosquitto_sub -t building/Apt1A/sensors
+mosquitto_sub -t building/Apt1B/sensors
+mosquitto_sub -t building/Apt2A/sensors
+mosquitto_sub -t building/Apt2B/sensors
+
+#3. To start the system 
+./start_system.sh
+
+
+
+
+
+
+# -------------------------------------------------
+            # WRITE TO path_information DATABASE (UPSERT)
+            # -------------------------------------------------
+            try:
+                conn = sqlite3.connect(DB_PATH)
+                c = conn.cursor()
+
+                evac = person_data.get("evacuation", {})
+                loc = person_data.get("location", {})
+
+                c.execute("""
+                    INSERT INTO path_information (
+                        file_name,
+                        position_x,
+                        position_y,
+                        is_evacuating,
+                        is_sheltering,
+                        assigned_exit,
+                        path_nodes,
+                        current_step,
+                        total_steps,
+                        progress_percent,
+                        direction_summary,
+                        turn_by_turn_instructions,
+                        last_updated
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    ON CONFLICT(file_name)
+                    DO UPDATE SET
+                        position_x = excluded.position_x,
+                        position_y = excluded.position_y,
+                        is_evacuating = excluded.is_evacuating,
+                        is_sheltering = excluded.is_sheltering,
+                        assigned_exit = excluded.assigned_exit,
+                        path_nodes = excluded.path_nodes,
+                        current_step = excluded.current_step,
+                        total_steps = excluded.total_steps,
+                        progress_percent = excluded.progress_percent,
+                        direction_summary = excluded.direction_summary,
+                        turn_by_turn_instructions = excluded.turn_by_turn_instructions,
+                        last_updated = excluded.last_updated
+                """, (
+                    f"{safe_uuid}.json",
+                    loc.get("position_x"),
+                    loc.get("position_y"),
+                    int(evac.get("is_evacuating", False)),
+                    int(evac.get("is_sheltering", False)),
+                    evac.get("assigned_exit"),
+                    json.dumps(evac.get("path_nodes", [])),
+                    evac.get("current_step", 0),
+                    evac.get("total_steps", 0),
+                    evac.get("progress_percent", 0),
+                    evac.get("direction_summary", ""),
+                    json.dumps(evac.get("turn_by_turn_instructions", [])),
+                    person_data.get("last_updated")
+                ))
+
+                conn.commit()
+                conn.close()
+
+            except Exception as e:
+                print(f"[DB] Error updating path_information for {safe_uuid}: {e}")

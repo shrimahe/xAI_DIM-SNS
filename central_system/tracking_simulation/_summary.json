@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-01-20T11:36:56.695093",
+  "mode": "SIMULATION",
+  "version": "3.0-probabilistic",
+  "building_status": {
+    "overall": "NORMAL",
+    "danger_zones": [],
+    "warning_zones": [],
+    "sensors": {
+      "NW": {
+        "fire": false,
+        "gas": 0,
+        "temperature": 25.0,
+        "sound": 0,
+        "status": "OK"
+      },
+      "NE": {
+        "fire": false,
+        "gas": 0,
+        "temperature": 25.0,
+        "sound": 0,
+        "status": "OK"
+      },
+      "SW": {
+        "fire": false,
+        "gas": 0,
+        "temperature": 25.0,
+        "sound": 0,
+        "status": "OK"
+      },
+      "SE": {
+        "fire": false,
+        "gas": 0,
+        "temperature": 25.0,
+        "sound": 0,
+        "status": "OK"
+      }
+    }
+  },
+  "tracking_summary": {
+    "total": 0,
+    "safe": 0,
+    "warning": 0,
+    "evacuating": 0,
+    "escaped": 0
+  },
+  "zone_occupancy": {},
+  "tracked_devices": []
+}
