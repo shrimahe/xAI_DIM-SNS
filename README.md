@@ -8,7 +8,7 @@
 
 <br>
 
-This project uses sensor data (temperature, humidity, pressure, gas, sound, and fire state) ingested via **MQTT** to evaluate safety scores and detect anomalies in real-time. **Explainable AI (XAI)** using the local **Ollama** (`llama3.2`) model provides human-readable explanations for scores and emergency alerts.
+This project uses sensor data (temperature, humidity, pressure, gas, sound, and fire state) ingested via **MQTT** to evaluate safety scores and detect anomalies in real-time. **Explainable AI (XAI)** using the local **Ollama** (`llama3.2`) model provides human-readable explanations for scores and emergency alerts
 
 ---
 
